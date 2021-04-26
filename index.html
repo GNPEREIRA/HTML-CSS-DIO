@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <meta charset="UTF-8">
+        <title>Troca de Livros</title>
+        <link href="estilo/menu.css" rel="stylesheet">
+        <link rel="stylesheet" href="estilo/principal.css">
+
+        <script>
+            window.onhashchange = function(e){
+                const oldURL = e.oldURL.split('#')[1]
+                const newURL = e.newURL.split('#')[1]
+                console.log(oldURL, newURL)
+                const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+                const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+                oldMenu && oldMenu.classList.remove('selected')
+                newMenu && newMenu.classList.add('selected')
+            }
+        </script>  
+    </head>
+
+    <body>
+        <header class="cabecalho">
+
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="img/icones/livro.png" alt="Logo" />
+                </a>
+                <p class="titulo"><span>C</span>lube da <span>T</span>roca</p>
+            </div>
+
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="#inicio">Galeria</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div class="galeria">
+            <div class="cards">
+                <img src="/img/irmaos-do-gelo.jpg" alt="Capa Os Irmãos do Gelo">
+                <div class="livro-info">
+                    <a href="#">Os Irmãos do Gelo</a>
+                </div>
+                <div class="acoes">
+                    <a href="#lendo" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#lido" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#favorito" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/morro-dos-ventos-uivantes.jpg" alt="Capa O Morro dos Ventos Uivantes">
+                <div class="livro-info">
+                    <a href="#">O Morro dos Ventos Uivantes</a>
+                </div>
+                <div class="acoes">
+                    <a href="#lendo" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#lido" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#favorito" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/harry-potter-1.jpg" alt="Capa Harry Potter e a pedra filosofal">
+                <div class="livro-info">
+                    <a href="#">Harry Potter e a pedra filosofal</a>
+                </div>
+                <div class="acoes">
+                    <a href="#lendo" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#lido" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#favorito" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/os-segredos-da-persuasao.jpg" alt="Capa Os Segredos da Persuasão">
+                <div class="livro-info">
+                    <a href="#">Os Segredos da Persuasão</a>
+                </div>
+                <div class="acoes">
+                    <a href="#lendo" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#lido" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#favorito" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/js.jpg" alt="Capa JavaScript">
+                <div class="livro-info">
+                    <a href="#">JavaScript - básico ao avançado</a>
+                </div>
+                <div class="acoes">
+                    <a href="#lendo" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#lido" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#favorito" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/html5.jpg" alt="Capa HTML 5">
+                <div class="livro-info">
+                    <a href="#">HTML 5</a>
+                </div>
+                <div class="acoes">
+                    <a href="#lendo" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#lido" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#favorito" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/css-flex.jpg" alt="Capa CSS FlexBox">
+                <div class="livro-info">
+                    <a href="#">CSS - Quebrando as regras do FlexBox</a>
+                </div>
+                <div class="acoes">
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/css-flex.jpg" alt="Capa CSS FlexBox">
+                <div class="livro-info">
+                    <a href="#">CSS - Quebrando as regras do FlexBox</a>
+                </div>
+                <div class="acoes">
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/css-flex.jpg" alt="Capa CSS FlexBox">
+                <div class="livro-info">
+                    <a href="#">CSS - Quebrando as regras do FlexBox</a>
+                </div>
+                <div class="acoes">
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/css-flex.jpg" alt="Capa CSS FlexBox">
+                <div class="livro-info">
+                    <a href="#">CSS - Quebrando as regras do FlexBox</a>
+                </div>
+                <div class="acoes">
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="/img/css-flex.jpg" alt="Capa CSS FlexBox">
+                <div class="livro-info">
+                    <a href="#">CSS - Quebrando as regras do FlexBox</a>
+                </div>
+                <div class="acoes">
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lendo.png" alt="ícone lendo"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/lido.png" alt="ícone lido"></a>
+                    <a href="#" class="acao-usuario"><img src="/img/icones/favorito.png" alt="ícone favorito"></a>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+
+    
+</html>
